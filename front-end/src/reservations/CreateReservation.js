@@ -18,6 +18,7 @@ function CreateReservation() {
   const [formData, setFormData] = useState(initialFormState);
   const [error, setError] = useState(null);
   const history = useHistory();
+  const [value, setValue] = useState('');
 
   const handleChange = ({ target }) => {
     const fieldValue = (target.id === 'people') ? target.valueAsNumber : target.value

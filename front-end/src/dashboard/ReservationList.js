@@ -2,7 +2,6 @@ import React from "react";
 import { Link, useHistory } from "react-router-dom";
 import { updateReservationStatus } from "../utils/api";
 
-
 function ReservationList({ reservation }) {
   const history = useHistory();
   
@@ -30,7 +29,7 @@ function ReservationList({ reservation }) {
     <div className="card col-sm-8 col-md-7 col-lg-6 m-auto">
       <div className="card-body">
         <h5 className="card-title ">{reservation.first_name} {reservation.last_name}</h5>
-        <h6 className="card-subtitle mb-2 text-muted">Phone Number: {reservation.mobile_number}</h6>
+        <h6 className="card-subtitle mb-2 text-muted" >Phone Number: {reservation.mobile_number}</h6>
         <p className="card-text">Time: {reservation.reservation_time}</p>
         <p className="card-text">
           Party Size: {reservation.people}

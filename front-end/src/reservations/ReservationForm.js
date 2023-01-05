@@ -34,8 +34,13 @@ function ReservationForm({ handleSubmit, handleChange, cancelHandler, formData }
         Phone Number:
       </label>
       <input
+        onKeyDown={(event) => {
+          if (!/[0-9]/.test(event.key)) {
+            event.preventDefault();
+          }
+        }}
         id="mobile_number"
-        type="tel"
+        type="text"
         className="form-control"
         placeholder="xxx-xxx-xxxx"
         name="mobile_number"
